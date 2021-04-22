@@ -1,28 +1,29 @@
 package org.philosophicas.checklistcomplete
 
+import android.util.Log
+
 class LineParser(
 
-        /** Call when reach a new aircraft Id tag */
-        var onNewCompleteCheckList: (parser: LineParser) -> Unit,
 
-        /** Call when reach a new checklist */
-        var onNewCheckList: (parser: LineParser) -> Unit,
+    /** Call when reach a new aircraft Id tag */
+    var onNewCompleteCheckList: (parser: LineParser) -> Unit,
 
-        /** Call when reach a new step */
-        var onNewStep: (parser: LineParser) -> Unit,
+    /** Call when reach a new checklist */
+    var onNewCheckList: (parser: LineParser) -> Unit,
 
-        /** Call when reach a new tabuled step */
-        var onNewTabuleStep: (parser: LineParser) -> Unit
+    /** Call when reach a new step */
+    var onNewStep: (parser: LineParser) -> Unit,
+
+    /** Call when reach a new tabuled step */
+    var onNewTabuleStep: (parser: LineParser) -> Unit
 ) {
 
-    enum class Mode(i: Int) {
-        Unknown(0),
-        Identifier(1),
-        Normal(4),
-        Emergency(2),
-    }
+
+    private val stepDelimiter: String = "..."
 
     var mode: Mode = Mode.Unknown
+    var modePrevious = Mode.Unknown
+
     var text: String? = null
 
     val ICAO: String?
@@ -45,8 +46,8 @@ class LineParser(
     val instruction: String?
         get() {
             if (mode == Mode.Normal || mode == Mode.Emergency) {
-                val t = text?.split(":")
-                if (t?.size!! < 2) return null
+                val t = text?.split(stepDelimiter)
+                if (t?.size!! < 2) return text!!
                 return t[0]
             }
             return null
@@ -55,7 +56,7 @@ class LineParser(
     val collation: String?
         get() {
             if (mode == Mode.Normal || mode == Mode.Emergency) {
-                val t = text?.split(":")
+                val t = text?.split(stepDelimiter)
                 if (t?.size!! < 2) return null
                 return t[1]
             }
@@ -65,70 +66,82 @@ class LineParser(
     val checklistName: String?
         get() {
             if (mode == Mode.Normal || mode == Mode.Emergency) {
-                return text?.split(":")?.get(0)
+                return text
             }
             return null
         }
 
 
     private val reservedCodes: Map<String, String> = mapOf(
-            "{" to "}",
-            "[" to "]",
-            "#" to "#"
+        "{" to "}",
+        "[" to "]",
+        "#" to "#",
+        "<" to ">"
     )
 
     fun parse(line: String) {
 
-        //Obtenemos el primer caracter
-        val first = line.first().toString()
+        if (line.trim() != "") {
 
-        //Si el primer caracter es de los reservados tomamos el texto interno para establecer el
-        // modo y recuperamos el texto de la etiqueta
+            //Obtenemos el primer caracter
+            val first = line.first().toString()
+            Log.d("aldox", line)
 
-        if (reservedCodes.containsKey(first)) {
-            val closeTag = reservedCodes[first]!!
-            val lastPosition = line.indexOf(closeTag, 1)
+            //Si el primer caracter es de los reservados tomamos el texto interno para establecer el
+            // modo y recuperamos el texto de la etiqueta
 
-            if (lastPosition < 0) {
-                text = line.substring(1)
+            if (reservedCodes.containsKey(first)) {
+                val closeTag = reservedCodes[first]!!
+                val lastPosition = line.indexOf(closeTag, 1)
+
+                if (lastPosition < 0) {
+                    text = line.substring(1)
+                } else {
+                    text = line.substring(1, lastPosition)
+                }
+
+                when (first) {
+
+                    "#" -> {
+                        modePrevious = mode
+                        mode = Mode.Identifier
+                        onNewCompleteCheckList(this)
+                    }
+
+                    "{" -> {
+                        modePrevious = mode
+                        mode = Mode.Emergency
+                        onNewCheckList(this)
+                    }
+
+                    "[" -> {
+                        modePrevious = mode
+                        mode = Mode.Normal
+                        onNewCheckList(this)
+                    }
+
+                    "<" -> {
+                        modePrevious = mode
+                        mode = Mode.Abnormal
+                        onNewCheckList(this)
+                    }
+
+                    else -> {
+                    }
+                }
             } else {
-                text = line.substring(1, lastPosition)
-            }
-
-            when (first) {
-
-                "#" -> {
-                    mode = Mode.Identifier
-                    onNewCompleteCheckList(this)
-                }
-
-                "{" -> {
-                    mode = Mode.Emergency
-                    onNewCheckList(this)
-                }
-
-                "[" -> {
-                    mode = Mode.Normal
-                    onNewCheckList(this)
-                }
-
-                else -> {
-                }
-            }
-        } else {
-            text = line
-            //No se corresponde con los caracteres especiales. Entonces significa que estamos en
-            //Un paso. Ahora bien, los pasos pueden ser tabulados.
-            when (first) {
-                "-" -> {
-                    onNewTabuleStep(this)
-                }
-                else -> {
-                    onNewStep(this)
+                text = line
+                //No se corresponde con los caracteres especiales. Entonces significa que estamos en
+                //Un paso. Ahora bien, los pasos pueden ser tabulados.
+                when (first) {
+                    "-" -> {
+                        onNewTabuleStep(this)
+                    }
+                    else -> {
+                        onNewStep(this)
+                    }
                 }
             }
         }
-
     }
-
 }

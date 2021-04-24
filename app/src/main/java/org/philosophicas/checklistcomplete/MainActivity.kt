@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 
 
         //Tomamos un avión por defecto
-        Preferences(this).defaultAircraft = "C172 N"
+        Preferences(this).defaultAircraft = "C172/N"
 
         //Obtenemos las vistas
         selectAircraftBtn = findViewById(R.id.mainSelectAircraftBtn)

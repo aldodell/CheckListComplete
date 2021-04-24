@@ -39,6 +39,21 @@ class ChecklistViewer : AppCompatActivity() {
         //Configuramos el RV
         recyclerView.layoutManager = LinearLayoutManager(this)
 
+
+        //Cargamos y procesamos las listas de chequeo
+        Thread {
+            val proc = ChecklistProcessor2()
+            val aircraftIdentifier = Preferences(this).defaultAircraft
+            val file = aircraftsPath + aircraftIdentifier!!.substring(0, 4)
+            checklistComplete = proc.parse(assets.open(file)).getByIdentifier(aircraftIdentifier)
+            runOnUiThread {
+                aircraftTv.setText(checklistComplete!!.identifier)
+                //Cagamos la inicial
+                loadSections(Mode.Normal)
+            }
+        }.start()
+
+        /*
         //Cargamos y procesamos la lista de chequeo
         Thread {
             val processor = CheckListProcessor(this)
@@ -52,6 +67,8 @@ class ChecklistViewer : AppCompatActivity() {
                 loadSections(Mode.Normal)
             }
         }.start()
+
+         */
 
 
         //Mostramos las secciones de emergencias

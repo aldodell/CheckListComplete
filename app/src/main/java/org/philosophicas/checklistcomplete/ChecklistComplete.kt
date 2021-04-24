@@ -8,7 +8,13 @@ class ChecklistComplete {
     val checklists = ArrayList<Checklist>()
 
     val identifier: String
-        get() = "$icao $model $information".trim()
+        get() {
+            var t = "$icao/$model"
+            if (information.isNotEmpty()) {
+                t = "$t/$information".trim()
+            }
+            return t
+        }
 
     fun getCheckListBy(mode: Mode, position: Int): Checklist? {
         val s = checklists.filter { it.mode == mode }
@@ -19,8 +25,8 @@ class ChecklistComplete {
         }
     }
 
-    fun getCheckListSizeBy(mode: Mode) : Int {
+    fun getCheckListSizeBy(mode: Mode): Int {
         return checklists.filter { it.mode == mode }.size
     }
-
 }
+

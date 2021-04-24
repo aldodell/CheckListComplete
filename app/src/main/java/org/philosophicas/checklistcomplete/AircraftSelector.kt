@@ -16,7 +16,7 @@ class AircraftSelector : AppCompatActivity() {
     lateinit var recyclerView: RecyclerView
     lateinit var selectedAircraftTv: TextView
     lateinit var searchView: SearchView
-    lateinit var selectAircraftBtn : Button
+    lateinit var selectAircraftBtn: Button
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,6 +39,8 @@ class AircraftSelector : AppCompatActivity() {
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(this)
 
+
+        /*
         //Obtenemos el procesador
         val proc = CheckListProcessor(this)
 
@@ -55,6 +57,26 @@ class AircraftSelector : AppCompatActivity() {
                 //Al terminar notificamos al adaptador que hay datos
                 adapter.filter(null)
             }
+        }.start()
+*/
+
+        /* Obtenemos los nombres de los aviones dentro de todos los archivos */
+        val proc = ChecklistProcessor2()
+        Thread {
+            assets.list(aircraftsPath)?.let {
+                it.forEach { file ->
+                    val stream = assets.open("$aircraftsPath/$file")
+                    proc.parseIdentifier(stream).forEach { aircraft ->
+                        aircrafts.add(aircraft)
+                    }
+
+                }
+            }
+            runOnUiThread {
+                //Al terminar notificamos al adaptador que hay datos
+                adapter.filter(null)
+            }
+
         }.start()
 
 

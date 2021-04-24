@@ -2,7 +2,6 @@ package org.philosophicas.checklistcomplete
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import android.widget.SearchView
 import android.widget.TextView
@@ -61,7 +60,7 @@ class AircraftSelector : AppCompatActivity() {
 */
 
         /* Obtenemos los nombres de los aviones dentro de todos los archivos */
-        val proc = ChecklistProcessor2()
+        val proc = ChecklistProcessor()
         Thread {
             assets.list(aircraftsPath)?.let {
                 it.forEach { file ->

@@ -42,7 +42,7 @@ class ChecklistViewer : AppCompatActivity() {
 
         //Cargamos y procesamos las listas de chequeo
         Thread {
-            val proc = ChecklistProcessor2()
+            val proc = ChecklistProcessor()
             val aircraftIdentifier = Preferences(this).defaultAircraft
             val file = aircraftsPath + aircraftIdentifier!!.substring(0, 4)
             checklistComplete = proc.parse(assets.open(file)).getByIdentifier(aircraftIdentifier)

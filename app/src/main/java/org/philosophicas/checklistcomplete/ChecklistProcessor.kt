@@ -5,7 +5,7 @@ import java.io.InputStream
 import java.io.InputStreamReader
 
 
-class ChecklistProcessor2 {
+class ChecklistProcessor {
 
 
     private val tags: Map<String, String> = mapOf(
@@ -22,7 +22,7 @@ class ChecklistProcessor2 {
 
         var text = ""
 
-        var result = ArrayList<String>()
+        val result = ArrayList<String>()
 
         //Obtenemos todo el contenido del archivo
         val code = BufferedReader(InputStreamReader(stream))

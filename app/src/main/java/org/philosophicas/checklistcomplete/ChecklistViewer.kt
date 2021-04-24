@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 
-class ChecklistViever : AppCompatActivity() {
+class ChecklistViewer : AppCompatActivity() {
 
     private lateinit var emergencyBtn: Button
     private lateinit var normalBtn: Button
@@ -25,7 +25,7 @@ class ChecklistViever : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_checklist_viever)
+        setContentView(R.layout.activity_checklist_viewer)
         emergencyBtn = findViewById(R.id.viewerBtnEmergency)
         normalBtn = findViewById(R.id.viewerBtnNormal)
         abnormalBtn = findViewById(R.id.viewerBtnAbnormal)

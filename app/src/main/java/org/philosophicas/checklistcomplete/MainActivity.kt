@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
 
         //Abrimos el visor
         goBtn.setOnClickListener {
-            startActivity(Intent(this, ChecklistViever::class.java))
+            startActivity(Intent(this, ChecklistViewer::class.java))
         }
 
 

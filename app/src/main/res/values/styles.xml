@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+
+    <style name="emergencyButton">
+        <item name="backgroundTint">@color/red</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="abnormalButton">
+        <item name="backgroundTint">#FFA726</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+
+    <style name="normalButton">
+        <item name="backgroundTint">#66BB6A</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="aircraft_type_title">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="checklist_name">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

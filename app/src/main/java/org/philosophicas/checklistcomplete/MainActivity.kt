@@ -1,10 +1,10 @@
 package org.philosophicas.checklistcomplete
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 
 
 val aircraftsPath = "aircrafts/"
@@ -18,6 +18,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
+        //Tomamos un avión por defecto
+        Preferences(this).defaultAircraft = "C172 N"
 
         //Obtenemos las vistas
         selectAircraftBtn = findViewById(R.id.mainSelectAircraftBtn)

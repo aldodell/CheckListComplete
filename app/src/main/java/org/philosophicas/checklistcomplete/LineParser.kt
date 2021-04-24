@@ -45,7 +45,7 @@ class LineParser(
 
     val instruction: String?
         get() {
-            if (mode == Mode.Normal || mode == Mode.Emergency) {
+            if (mode == Mode.Normal || mode == Mode.Emergency || mode == Mode.Abnormal) {
                 val t = text?.split(stepDelimiter)
                 if (t?.size!! < 2) return text!!
                 return t[0]
@@ -55,7 +55,7 @@ class LineParser(
 
     val collation: String?
         get() {
-            if (mode == Mode.Normal || mode == Mode.Emergency) {
+            if (mode == Mode.Normal || mode == Mode.Emergency || mode == Mode.Abnormal) {
                 val t = text?.split(stepDelimiter)
                 if (t?.size!! < 2) return null
                 return t[1]
@@ -65,7 +65,7 @@ class LineParser(
 
     val checklistName: String?
         get() {
-            if (mode == Mode.Normal || mode == Mode.Emergency) {
+            if (mode == Mode.Normal || mode == Mode.Emergency || mode == Mode.Abnormal) {
                 return text
             }
             return null

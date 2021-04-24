@@ -213,14 +213,15 @@ Wing Flaps...10
 Wing Flaps...(after clearing obstacles) RETRACT
 
 [After Landing / Clear Of Runway]
-Flaps... UP
+Flaps ... UP
 Carburetor Heat... OFF
 Mixture...LEAN for TAXI
 Landing Light... OFF
 Strobe Lights... OFF
 Transponder ...STANDBY
 Taxi Clearance / Advisory ...CONTACT
-Securing Airplane
+
+[Securing Airplane]
 Avionics Master Switch... OFF
 Throttle... IDLE
 Magnetos...CHECK GROUNDING
@@ -237,28 +238,6 @@ Wheel Chocks & Tie Downs ... SECURE
 Post Flight Walk-Around... COMPLETE
 Doors... LOCKED
 
-[ABNORMAL PROCEDURES]
-Flooded Start
-Mixture...IDLE CUT-OFF
-Throttle... FULL OPEN
-Proceed with item 3 on “Starting Engine” checklist
-Ammeter Shows Excessive Rate Of Charge
-Alternator... OFF
-Alternator Circuit Breaker ...PULL
-Nonessential Electrical Equipment... OFF
-Flight...LAND AS SOON AS PRACTICAL
-Low Voltage Light Illuminates In Flight
-Radios ... OFF
-Alternator Circuit Breaker ...CHECK IN
-Alternator Switch...OFF then ON
-Low Voltage Light...CHECK OFF
-Radios ...ON
-If Low Voltage Light Illuminates Again:
-Alternator... OFF
-Nonessential Electrical Equipment... OFF
-Flight... TERMINATE
-
-
 <Flooded Start>
 Mixture...IDLE CUT-OFF
 Throttle... FULL OPEN
@@ -269,16 +248,30 @@ Alternator... OFF
 Alternator Circuit Breaker ...PULL
 Nonessential Electrical Equipment... OFF
 Flight...LAND AS SOON AS PRACTICAL
-Low Voltage Light Illuminates In Flight
+
+<Low Voltage Light Illuminates In Flight>
 Radios ... OFF
 Alternator Circuit Breaker ...CHECK IN
 Alternator Switch...OFF then ON
 Low Voltage Light...CHECK OFF
 Radios ...ON
 If Low Voltage Light Illuminates Again:
-Alternator... OFF
-Nonessential Electrical Equipment... OFF
-Flight... TERMINATE
+-Alternator... OFF
+-Nonessential Electrical Equipment... OFF
+-Flight... TERMINATE
+
+<Landing With A Flat Main Tire>
+Flaps... AS REQUIRED
+Approach ... NORMAL
+Touchdown ... GOOD TIRE FIRST
+Directional Control ... MAINTAIN (using brake on good tire)
+
+<Landing With A Flat Nose Tire>
+Flaps... AS REQUIRED
+Approach... NORMAL
+Touchdown ...MAIN GEAR FIRST
+Elevator... AS NECESSARY TO DELAY NOSE GEAR CONTACT
+Maintain full aft elevator deflection during ground roll
 
 {Engine Failure Immediately After Takeoff}
 Airspeed (Flaps Up) ...65 KIAS

@@ -72,13 +72,15 @@ class StepsAdapter(
     }
 
 
-    fun markStepAsDone() {
+    fun markStepAsDone(): Int {
+        val n = indexStep
         checklist!!.steps[indexStep].isDone = true
         notifyDataSetChanged()
+
         indexStep++
         if (indexStep == checklist!!.steps.size) {
             indexStep = 0
         }
-
+        return n
     }
 }

@@ -12,6 +12,7 @@ class ChecklistViever : AppCompatActivity() {
 
     private lateinit var emergencyBtn: Button
     private lateinit var normalBtn: Button
+    private lateinit var abnormalBtn: Button
     private lateinit var nextBtn: Button
     private lateinit var backBtn: Button
     private lateinit var doneBtn: Button
@@ -27,6 +28,7 @@ class ChecklistViever : AppCompatActivity() {
         setContentView(R.layout.activity_checklist_viever)
         emergencyBtn = findViewById(R.id.viewerBtnEmergency)
         normalBtn = findViewById(R.id.viewerBtnNormal)
+        abnormalBtn = findViewById(R.id.viewerBtnAbnormal)
         nextBtn = findViewById(R.id.viewerBtnNext)
         backBtn = findViewById(R.id.viewerBtnBack)
         doneBtn = findViewById(R.id.viewerBtnDone)
@@ -40,8 +42,8 @@ class ChecklistViever : AppCompatActivity() {
         //Cargamos y procesamos la lista de chequeo
         Thread {
             val processor = CheckListProcessor(this)
-            val aircraftIdentifier =  Preferences(this).defaultAircraft
-            val f = aircraftsPath + aircraftIdentifier!!.substring(0,4)
+            val aircraftIdentifier = Preferences(this).defaultAircraft
+            val f = aircraftsPath + aircraftIdentifier!!.substring(0, 4)
 
             checklistComplete = processor.parse(f).getByIdentifier(aircraftIdentifier)
             runOnUiThread {
@@ -62,16 +64,24 @@ class ChecklistViever : AppCompatActivity() {
             loadSections(Mode.Normal)
         }
 
+        //Mostramos las secciones anormales
+        abnormalBtn.setOnClickListener {
+            loadSections(Mode.Abnormal)
+        }
+
+
         //Configuramos el botón DONE:
         doneBtn.setOnClickListener {
-            (recyclerView.adapter as? StepsAdapter)?.markStepAsDone()
+            (recyclerView.adapter as? StepsAdapter)?.markStepAsDone()?.let {
+                (recyclerView.layoutManager as? LinearLayoutManager)?.scrollToPosition(it)
+            }
         }
 
         //Configuramos el botón next:
         nextBtn.setOnClickListener {
-
-            loadChecklist(checklistIndex)
             checklistIndex++
+            loadChecklist(checklistIndex)
+
 
         }
 
@@ -119,8 +129,9 @@ class ChecklistViever : AppCompatActivity() {
             checklistComplete!!,
             currentMode,
             pos,
-            getColor(R.color.design_default_color_primary),
-            getColor(R.color.design_default_color_secondary)
+            getColor(R.color.white),
+            getColor(R.color.green)
+
         )
         recyclerView.adapter?.notifyDataSetChanged()
         checklistComplete!!.getCheckListBy(currentMode, pos)?.let {

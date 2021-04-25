@@ -33,10 +33,10 @@ class StepsAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
         val s = checklist!!.steps[position]
-        val inst = if (s.isTabuled) "\t${s.instruction.substring(1)}" else s.instruction
+        val inst = if (s.isTabuled) "    ${s.instruction.substring(1).trim()}" else s.instruction.trim()
 
 
-        holder.instruction.setText(inst.trim())
+        holder.instruction.text = inst
 
         if (s.collation == "") {
             holder.points.visibility = View.GONE

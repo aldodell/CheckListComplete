@@ -1,21 +1,19 @@
 <resources>
-    <string name="app_name">Checklist Complete!</string>
+    <string name="app_name">Checklist completed!</string>
     <string name="todo">TODO</string>
     <string name="emergency">EMERGENCY</string>
     <string name="abnormal">ABNORMAL</string>
+    <string name="normal">NORMAL</string>
+    <string name="info">INFO</string>
     <string name="next">NEXT</string>
     <string name="back">BACK</string>
     <string name="done">DONE</string>
     <string name="example">example</string>
     <string name="sections">sections</string>
-    <string name="normal">normal</string>
-    <string name="points">..................................................................................................................................................................................................</string>
+    <string name="points">.............................................................</string>
     <string name="intro">Welcome to the definitive app for checklists. This is a project in continuous development. Our goal is to offer the most extensive database of aviation checklists.</string>
     <string name="go_to_checklist">Go!</string>
     <string name="select_aircraft">Select aircraft</string>
     <string name="no_selected_aircraft">No selected aircraft</string>
-    <string name="title_activity_main2">MainActivity2</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
 
 </resources>

@@ -1,5 +1,6 @@
 package org.philosophicas.checklistcomplete
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -13,6 +14,8 @@ class ChecklistViewer : AppCompatActivity() {
     private lateinit var emergencyBtn: Button
     private lateinit var normalBtn: Button
     private lateinit var abnormalBtn: Button
+    private lateinit var infoBtn: Button
+
     private lateinit var nextBtn: Button
     private lateinit var backBtn: Button
     private lateinit var doneBtn: Button
@@ -29,12 +32,16 @@ class ChecklistViewer : AppCompatActivity() {
         emergencyBtn = findViewById(R.id.viewerBtnEmergency)
         normalBtn = findViewById(R.id.viewerBtnNormal)
         abnormalBtn = findViewById(R.id.viewerBtnAbnormal)
+        infoBtn = findViewById(R.id.viewerInfoBtn)
+
         nextBtn = findViewById(R.id.viewerBtnNext)
         backBtn = findViewById(R.id.viewerBtnBack)
         doneBtn = findViewById(R.id.viewerBtnDone)
         recyclerView = findViewById(R.id.viewerRV)
         aircraftTv = findViewById(R.id.viewerAircraftTv)
         checkListName = findViewById(R.id.viewerChecklistName)
+        emergencyBtn = findViewById(R.id.viewerBtnEmergency)
+
 
         //Configuramos el RV
         recyclerView.layoutManager = LinearLayoutManager(this)
@@ -48,32 +55,18 @@ class ChecklistViewer : AppCompatActivity() {
             checklistComplete = proc.parse(assets.open(file)).getByIdentifier(aircraftIdentifier)
             runOnUiThread {
                 aircraftTv.setText(checklistComplete!!.identifier)
+
                 //Cagamos la inicial
                 loadSections(Mode.Normal)
+                checkListName.setText(R.string.normal)
             }
         }.start()
-
-        /*
-        //Cargamos y procesamos la lista de chequeo
-        Thread {
-            val processor = CheckListProcessor(this)
-            val aircraftIdentifier = Preferences(this).defaultAircraft
-            val f = aircraftsPath + aircraftIdentifier!!.substring(0, 4)
-
-            checklistComplete = processor.parse(f).getByIdentifier(aircraftIdentifier)
-            runOnUiThread {
-                aircraftTv.setText(checklistComplete!!.identifier)
-                //Cagamos la inicial
-                loadSections(Mode.Normal)
-            }
-        }.start()
-
-         */
 
 
         //Mostramos las secciones de emergencias
         emergencyBtn.setOnClickListener {
             loadSections(Mode.Emergency)
+
         }
 
         //Mostramos las secciones normales
@@ -84,6 +77,11 @@ class ChecklistViewer : AppCompatActivity() {
         //Mostramos las secciones anormales
         abnormalBtn.setOnClickListener {
             loadSections(Mode.Abnormal)
+        }
+
+        //Mostramos las secciones anormales
+        infoBtn.setOnClickListener {
+            loadSections(Mode.Info)
         }
 
 
@@ -120,6 +118,33 @@ class ChecklistViewer : AppCompatActivity() {
                 }
             recyclerView.adapter?.notifyDataSetChanged()
             currentMode = mode
+        }
+
+        when (mode) {
+            Mode.Normal -> {
+                checkListName.setText(R.string.normal)
+                checkListName.setBackgroundColor(getColor(R.color.normal))
+            }
+
+            Mode.Emergency -> {
+                checkListName.setText(R.string.emergency)
+                checkListName.setBackgroundColor(getColor(R.color.emergency))
+            }
+
+
+            Mode.Abnormal -> {
+                checkListName.setText(R.string.abnormal)
+                checkListName.setBackgroundColor(getColor(R.color.abnormal))
+            }
+
+            Mode.Info -> {
+                checkListName.setText(R.string.info)
+                checkListName.setBackgroundColor(getColor(R.color.info))
+            }
+
+            else -> {
+            }
+
         }
     }
 

@@ -9,6 +9,12 @@
     <color name="white">#FFFFFFFF</color>
     <color name="red">#FFFF0000</color>
     <color name="green">#64DD17</color>
+    <color name="emergency">#FFFF0000</color>
+    <color name="normal">#64DD17</color>
+    <color name="abnormal">#FFB74D</color>
+    <color name="info">#1E88E5</color>
+
+
 
 
 </resources>

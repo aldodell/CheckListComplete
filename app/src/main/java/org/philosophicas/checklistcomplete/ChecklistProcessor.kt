@@ -9,10 +9,11 @@ class ChecklistProcessor {
 
 
     private val tags: Map<String, String> = mapOf(
-        "#" to "#",
-        "[" to "]",
-        "{" to "}",
-        "<" to ">",
+        "#" to "#", //ID
+        "[" to "]", //Normal
+        "{" to "}", //Emergency
+        "<" to ">", //Abnormal
+        "(" to ")" //Info
     )
 
     /**
@@ -20,7 +21,7 @@ class ChecklistProcessor {
      */
     fun parseIdentifier(stream: InputStream): List<String> {
 
-        var text = ""
+        var text: String
 
         val result = ArrayList<String>()
 
@@ -58,7 +59,7 @@ class ChecklistProcessor {
     /** Parse a InputStream a return a collecction of ChecklistComplete */
     fun parse(stream: InputStream): ChecklistCompleteCollection {
 
-        var text = ""
+        var text : String
 
         val checklistCompleteCollection = ChecklistCompleteCollection()
 
@@ -141,6 +142,16 @@ class ChecklistProcessor {
                         cl.mode = Mode.Emergency
                         checklistCompleteCollection.last().checklists.add(cl)
                     }
+
+
+                    //Sección Información
+                    "(" -> {
+                        val cl = Checklist()
+                        cl.name = text
+                        cl.mode = Mode.Info
+                        checklistCompleteCollection.last().checklists.add(cl)
+                    }
+
 
                     //Agregamos los pasos tabulados
                     "-" -> {

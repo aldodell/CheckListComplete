@@ -323,7 +323,42 @@ Approach:
 -High Winds, Heavy Seas...Land Into Wind
 -Light Winds, Heavy Swells...Parallel to Swells
 Prior to touchdown:
--Cabin Door -: Unlatched & Opened
+-Cabin Door ... Unlatched & Opened
+<Landing With A Flat Main Tire>
+Flaps... AS REQUIRED
+Approach ... NORMAL
+Touchdown ... GOOD TIRE FIRST
+Directional Control ... MAINTAIN (using brake on good tire)
+
+<Landing With A Flat Nose Tire>
+Flaps... AS REQUIRED
+Approach... NORMAL
+Touchdown ...MAIN GEAR FIRST
+Elevator... AS NECESSARY TO DELAY NOSE GEAR CONTACT
+Maintain full aft elevator deflection during ground roll
+
+(Design Maneuvering Speed VA)
+-Do not make full or abrupt control movements above this speed.
+3000 lbs.
+- KIAS/KCAS ... 124/122
+1761 lbs.
+- KIAS/KCAS ... 96/94
+
+
+(Never Exceed Speed VNE)
+Do not exceed this speed in any operation.
+-KIAS/KCAS ... 173/171
+(Maximum Structural Cruising Speed VNo)
+Do not exceed this speed except in smooth air and then only with caution.
+-KIAS/KCAS ... 137/135
+(Maximum Flaps Extended Speed VFE)
+Do not exceed this speed with the flaps extended.
+-KIAS/KCAS ... 102/100
+
+
+
+
+
 
 #PA28/140#
 [CABIN PREFLIGHT]
@@ -650,4 +685,5 @@ Approach:
 -High Winds, Heavy Seas...Land Into Wind
 -Light Winds, Heavy Swells...Parallel to Swells
 Prior to touchdown:
--Cabin Door -: Unlatched & Opened
+-Cabin Door...Unlatched & Opened
+

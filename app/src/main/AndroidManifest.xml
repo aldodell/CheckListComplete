@@ -9,7 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CheckListComplete">
-        <activity android:name=".ChecklistViewer2"></activity>
         <activity android:name=".AircraftSelector" />
         <activity android:name=".ChecklistViewer" />
         <activity android:name=".MainActivity">

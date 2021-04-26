@@ -54,7 +54,7 @@ class ChecklistViewer : AppCompatActivity() {
             val file = aircraftsPath + aircraftIdentifier!!.substring(0, 4)
             checklistComplete = proc.parse(assets.open(file)).getByIdentifier(aircraftIdentifier)
             runOnUiThread {
-                aircraftTv.setText(checklistComplete!!.identifier)
+                aircraftTv.text = checklistComplete!!.identifier
 
                 //Cagamos la inicial
                 loadSections(Mode.Normal)
@@ -87,9 +87,17 @@ class ChecklistViewer : AppCompatActivity() {
 
         //Configuramos el botón DONE:
         doneBtn.setOnClickListener {
-            (recyclerView.adapter as? StepsAdapter)?.markStepAsDone()?.let {
-                (recyclerView.layoutManager as? LinearLayoutManager)?.scrollToPosition(it)
+
+            (recyclerView.adapter as? StepsAdapter)?.markStepAsDone()?.let { stepN ->
+                (recyclerView.layoutManager as? LinearLayoutManager)?.let {
+                    if (stepN >= it.findLastVisibleItemPosition()) {
+                        it.scrollToPosition(it.findLastVisibleItemPosition() + 1)
+                    }
+                }
+
             }
+
+
         }
 
         //Configuramos el botón next:
@@ -106,6 +114,8 @@ class ChecklistViewer : AppCompatActivity() {
             loadChecklist(checklistIndex)
 
         }
+
+        //https://dev.to/aldok/how-to-scroll-recyclerview-to-a-certain-position-5ck4
 
 
     }

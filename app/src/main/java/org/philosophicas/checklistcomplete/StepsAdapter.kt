@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 
 class StepsAdapter(
@@ -23,6 +24,11 @@ class StepsAdapter(
         var instruction: TextView = itemView.findViewById(R.id.step_instruction)
         var collation: TextView = itemView.findViewById(R.id.step_collation)
         var points: TextView = itemView.findViewById(R.id.step_points)
+
+        // val instructionParams = (instruction.layoutParams as ConstraintLayout.LayoutParams)
+        // var instructionWidthPercent = instructionParams.matchConstraintPercentWidth
+
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -33,7 +39,8 @@ class StepsAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
         val s = checklist!!.steps[position]
-        val inst = if (s.isTabuled) "    ${s.instruction.substring(1).trim()}" else s.instruction.trim()
+        val inst =
+            if (s.isTabuled) "    ${s.instruction.substring(1).trim()}" else s.instruction.trim()
 
 
         holder.instruction.text = inst
@@ -41,10 +48,14 @@ class StepsAdapter(
         if (s.collation == "") {
             holder.points.visibility = View.GONE
             holder.collation.visibility = View.GONE
+            //  holder.instructionWidthPercent = holder.instructionParams.matchConstraintPercentWidth
+            //  holder.instructionParams.matchConstraintPercentWidth = 0.8F
+
         } else {
             holder.points.visibility = View.VISIBLE
             holder.collation.visibility = View.VISIBLE
-            holder.collation.setText(s.collation.trim())
+            holder.collation.text = s.collation.trim()
+            //  holder.instructionParams.matchConstraintPercentWidth = holder.instructionWidthPercent
         }
 
         if (s.isDone) {
@@ -73,6 +84,8 @@ class StepsAdapter(
 
 
     fun markStepAsDone(): Int {
+
+
         val n = indexStep
         checklist!!.steps[indexStep].isDone = true
         notifyDataSetChanged()

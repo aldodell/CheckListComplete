@@ -2,14 +2,14 @@
 
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/step_card_view"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="4dp"
     app:cardBackgroundColor="@color/cardview_dark_background">
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -23,9 +23,9 @@
             android:singleLine="false"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/step_points"
+            app:layout_constraintHorizontal_weight="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintWidth_percent="0.45"
             tools:text="MIXTURE" />
 
         <TextView
@@ -35,9 +35,9 @@
             android:maxLines="1"
             android:text="@string/points"
             app:layout_constraintEnd_toStartOf="@+id/step_collation"
+            app:layout_constraintHorizontal_weight="0.1"
             app:layout_constraintStart_toEndOf="@+id/step_instruction"
-            app:layout_constraintTop_toTopOf="@+id/step_instruction"
-            app:layout_constraintWidth_percent="0.1" />
+            app:layout_constraintTop_toTopOf="@+id/step_instruction" />
 
         <TextView
             android:id="@+id/step_collation"
@@ -47,6 +47,7 @@
             android:singleLine="false"
             android:textAlignment="textEnd"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="0.4"
             app:layout_constraintStart_toEndOf="@+id/step_points"
             app:layout_constraintTop_toTopOf="@+id/step_instruction"
             tools:text="FULL FORWARD" />

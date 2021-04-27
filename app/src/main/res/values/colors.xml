@@ -8,11 +8,13 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="red">#FFFF0000</color>
-    <color name="green">#64DD17</color>
-    <color name="emergency">#FFFF0000</color>
-    <color name="normal">#64DD17</color>
-    <color name="abnormal">#FFB74D</color>
-    <color name="info">#1E88E5</color>
+    <color name="green">#00C853</color>
+    <color name="emergency">#D32F2F</color>
+    <color name="normal">#388E3C</color>
+    <color name="abnormal">#FFA000</color>
+    <color name="info">#1976D2</color>
+    <color name="section_row">#1A237E</color>
+
 
 
 

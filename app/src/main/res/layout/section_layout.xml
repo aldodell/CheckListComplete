@@ -9,5 +9,6 @@
         android:id="@+id/stepSectionBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/section_row"
         android:text="@string/todo" />
 </androidx.cardview.widget.CardView>

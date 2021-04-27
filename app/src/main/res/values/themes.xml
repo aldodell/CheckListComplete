@@ -22,7 +22,9 @@
         <item name="cardBackgroundColor">@color/purple_500</item>
         <item name="android:textColorPrimary">@color/white</item>
         <item name="colorControlNormal">@color/green</item>
-    </style>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowNoTitle">true</item>
+      </style>
 
     <style name="Theme.CheckListComplete.NoActionBar">
         <item name="windowActionBar">false</item>

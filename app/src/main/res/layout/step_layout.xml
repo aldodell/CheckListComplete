@@ -7,6 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="4dp"
+    android:layout_gravity="top"
     app:cardBackgroundColor="@color/cardview_dark_background">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -26,6 +27,7 @@
             app:layout_constraintHorizontal_weight="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            android:gravity="top"
             tools:text="MIXTURE" />
 
         <TextView
@@ -34,6 +36,7 @@
             android:layout_height="wrap_content"
             android:maxLines="1"
             android:text="@string/points"
+            android:gravity="top"
             app:layout_constraintEnd_toStartOf="@+id/step_collation"
             app:layout_constraintHorizontal_weight="0.1"
             app:layout_constraintStart_toEndOf="@+id/step_instruction"
@@ -45,7 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:singleLine="false"
-            android:textAlignment="viewEnd"
+            android:gravity="end|top"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_weight="0.4"
             app:layout_constraintStart_toEndOf="@+id/step_points"

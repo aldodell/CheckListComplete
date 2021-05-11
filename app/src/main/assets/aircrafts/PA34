@@ -5,7 +5,7 @@ BEST ANGLE OF CLIMB VX...83 KIAS
 TURBULENT AIR OPERATION...135 KIAS
 MAXIMUM FLAP SPEED...113 KIAS
 SHORT FIELD EFFORT...80 KIAS
-INTENCIONAL ONE ENGINE INOPERATIVE...85 KIAS
+INTENTIONAL ONE ENGINE INOPERATIVE...85 KIAS
 MAX. DEMONSTRATED CROSSWIND...17 KIAS
 
 [PREFLIGHT COCKPIT]
@@ -13,7 +13,7 @@ CONTROL WHEEL ... RELEASE RESTRAINTS
 STATIC SYSTEM ... DRAIN
 PARKING BRAKE ... SET
 MAGNETO SWITCHES ... OFF
-STANDY BY FUEL PUMP ... OFF
+STANDBY FUEL PUMP ... OFF
 FLIGHT CONTROLS ... PROPER OPERATION
 GEAR SELECTOR ... DOWN
 THROTTLES ... IDLES
@@ -652,7 +652,7 @@ ALTERNATOR...CHECK
 TO EXTEND, REPOSITION GUARD CLIP DOWNARD CLEAR  OF KNOB AND PROCCED AS FOLLOWS:
 AIRSPEED...REDUCE TO 85 KIAS MAX.
 GEAR SELECTOR...GEAR DOWN POSITION
-EMER.GEAR EXTEND KNOB....PULL
+EMER.GEAR EXTEND KNOB...PULL
 INDICATOR LIGHTS...3 GREEN
 WARNING: IF EMERGENCY GEAR EXTENSION KNOB HAS BEEN PULLED OUT TO LOWER THE GEAR DUE TO GEAR SYSTEM MALFUNCTION ,LEAVE THE CONTROL IN ITS EXTENDED POSITION UNTIL THE AIRPLANE HAS BEEN PUT ON JACKS TO CHECK THE PROPER FUNCTION OF THE LANDING GEAR HYDRAULIC AND ELECTRICAL SYSTEM
 
@@ -662,7 +662,7 @@ GROUND PERSONNEL...INFORM IF POSSIBLE
 FUEL...BURN OFF(IF TIME ALLOWED)
 SEAT BELTS,HARNESSES...FASTENED/ADJUSTED, CHECK INERTIA REEL
 PASSENGER...BRIEF
-NORMAL LANDING CHECKLIST....COMPLETE
+NORMAL LANDING CHECKLIST...COMPLETE
 AUTOPILOT...OFF
 BATTERY MASTER SWITCH(DAYTIME)...OFF
 APPROACH...NORMAL
@@ -735,9 +735,469 @@ AIRSPEED...REDUCE
 THROTTLE(AFFECTED ENGINE)...AS REQUIRED TO MAINTAIN BELOW 2600 RPM
 
 
+#PA34/PIPER SENECA II#
+
+(Speeds)
+Vso...61 KTS
+Vs1...63 KTS
+Vmca...66 KTS
+Vr (Short Field)...71 KTS
+Vr (Normal)...80 KTS
+Vx ...76 KTS
+Vy ...89 KTS
+Vyse...89 KTS
+Vsse...76 KTS
+Cruise Climb...32’ / 2450rpm ... 110 KTS
+Holding speed...120 KTS
+Downwind 10º Flap & Gear down...100 KTS
+Base 25º Flap...95 KTS
+Final 40º Flap...85 KTS
+Intermediate Apch Segment ...120-100 KTS
+Final Apch Segment 25º Flap...95 KTS
+Vne ...195 KTS
+Vno...163 KTS
+Va ...135 at 4407 lbs / 121 KTS at 3068 lbs
+Vfe 10º...138 KTS
+Vfe 25º...121 KTS
+Vfe 40º...107 KTS
+Vle...129 KTS
+Vlo Extending...129 KTS
+Vlo Retracting...107 KTS
+Demonstrated X-WIND ... 17 KTS
+
+[COCKPIT PREPARATION]
+Aircraft Documents...Stowed
+Parking Brake... ON
+First Aid Kit... Stowed
+Fire Extinguisher... Check
+Gear Selector... Down
+Gear Emergency Selector...In & Guarded
+Battery Master Switch...On
+Landing Gear Lights...Three Greens
+Fuel Quantity...Adequate + Reserve
+Battery Master Switch...OFF
+Magneto Switches... OFF
+Mixture... Iddle cut-off
+Trim Indicators... Neutral
+Flaps... Check Operation
+Flying Controls...Full Free Correct Movement
+Empty Seats... Fasten Belts
+Cross Feed Drains...Operate
+
+[OUTSIDE CABIN]
+Battery Master Switch...ON
+Exterior Lights...On / Check/Off
+Stall Warning Vanes...Check
+Pitot Heat ...Check (Max 3 min ground ops)
+Battery Master Switch...OFF
+Windshield ... Clean
+Bagage and rear door ...Secure and Locked
+
+[BEFORE STARTING ENGINE]
+External Checks...Completed
+Main Doors... ...Closed & Latched
+Seats/Belts/Harnesses...Adjusted and Set
+Parking Brakes... SET
+Alternate Air Controls... OFF
+Circuit Breakers... IN
+Cowl Flaps... Open
+Battery Master Switch...ON
+Avionics Master & Radio...ON
+ATIS Copied and Start-up Clearance...Obtained
+Altimeter... Set with local QNH
+Radio & Avionics Master... OFF
+Battery Master Switch...If no clearance OFF
+
+[STARTING ENGINES]
+Battery Master Switch...confirm ON
+Beacon light (Fin light)... ON
+Auxiliary Fuel Pumps...OFF
+Avionics Master... OFF
+Starting Engine N0 1
+Fuel Selector N0 1... On
+Mixture N0 1... Full Rich
+Propeller N0 1... Full Forward
+Throttle N0 1... Half Travel
+Magnetos Switches N0 1... On
+Prime...(3 Secs Warm, 6 Secs Cold)
+Propeller Area... Clear
+Starter... Engage
+-When Engine Starts:
+Throttle...Retard and Set 1000 / 1200 RPM
+Oil Pressure N0 1...Check (Rise Within 30 Secs)
+Alternator N0 1...ON and Check (Max 60 Amps)
+Gyro Pressure...Check / Warning Indicator OFF
+Alternator N0 1... OFF
+Starting Eng N0 2... Repeat procedure for N0 2
+Alternators...Both ON check balance approx 15 AMP each
+
+[AFTER START CHECK LIST]
+Electrical Trim...ON/Check/Set
+Avionics Master Switch...On
+Intercom...Check On & Volume Set
+Comms/Navs 1&2 / DME / ADF ... On
+Transponder ... Standby
+Left Fuel Selector ... Check Shutoff / X-Feed /ON
+Right Fuel Selector - Check Shutoff / X-Feed /ON
+Avionics ...CHECK & SET for departure
+Markers... On
+A/P... ON / Check / Disconnect (red button)
+Cabin Heat/Defrost... Check
+Air Intake... Open
+Heat/Fan Switch ... Check
+Defrost Switch...Check
+Fan... As required
+Clock ... Set (UTC)
+Stop Watch... Wound
+Nav Lights... As req.
+Fuel Pumps... ON & OFF Check
+Flight Instruments...Set and Check
+Radios...Intentions & request taxi
+
+[TAXI CHECKLIST]
+Look outside and Check...(Right & Left Clear)
+Parking Brake... OFF
+Brakes & Steering (Both Pilots)... Check
+Flight Instr. (TC, HIS, Compass, AH, RMI) Check
+
+[POWER CHECKS]
+Position... Into Wind & Area Clear
+Parking Brake... On
+Temperatures & Pressures...Check
+Cowl Flaps... As Required
+Fuel Selectors... ON
+Throttle... 1200 RMP
+Commence With Left Engine Checks
+Propeller Feather...Check Max. 300 RPM
+Throttle... 1900 RPM
+Propeller Control... Exercise
+Propeller... Check Governor
+Alternate Air... On Then Off
+Magnetos... Check 150/50
+Alternators Output...Check
+Gyro pressure... 4.8 – 5.1”Hg
+Throttle...Close/Check Idle (700–900 RPM)
+Throttle... 1000 RPM
+Pressures & Temperatures...Check
+Fuel Flow...Check (Usually 5–7 GPH)
+De-Icing Boots... Check(Inflate (6 secs) Suction Drops 6”)
+Propeller De-Icing...Check Twice On & Off
+Annunciator Panel...Test
+
+[BEFORE TAKE OFF CHECK]
+Trimmers... Set / (T.O. pos.)
+Throttle Friction... Set
+Mixtures... Rich
+Fuel Selectors...On Check Content
+Propellers...Fully forward(Max RPM)
+Auxiliary Fuel Pumps...Off
+Flaps...(As required) Set for T.O.
+Cowl Flaps... Set (1/2 or fully open)
+Alternate Air... Off
+Cabin Heater/Defrost...As Requested
+Seat Belts/Seat Back...Secure/Erect
+Main Doors...Latched & Closed
+Flying Controls...Full/Free Movement
+Auto Pilot... Confirm Off
+Departure Clearance...Copied
+TO and Departure briefing ...Completed
+Altimeters...QNH set / Check vs elevation
+Avionics...Confirm RAD/NAV
+Engine Instruments... Check
+Propeller De-Icing...As Required
+Vent Fan... Off
+
+[RWY ITEMS]
+T.O. Time ... Noted
+Flaps... Check
+Transponder... Set ALT Mode
+Landing, Recognition, Anti-Collision Lights...On
+Pitot Heat...As Required (Max 3 Min on gnd)
+RWY HDG...Check when aligned
+
+[AFTER T.O. CHECK LIST]
+Gear...Up (Max Retraction Speed 107KTS)
+Flaps...Retract Above 200’ AGL
+Power... Set 32”/2450 RPM
+Landing lights... ...OFF
+Altimeters...Set / Cross Checked
+Icing... Check
+Radio Aids...Identify If Required
+[CRUISE CLIMB CHECK LIST]
+Climb PWR...Set 32” / 2450 RPM
+Pitch down ...(Speed 100 / 110 KIAS)
+Cowl Flaps... As Required
+
+[CRUISE CHECKS]
+Cruise Power...Set as Required
+Mixtures... Lean ROP
+EGT... check max 15500 F
+Engine Instruments...Check
+Cowl Flaps... As Required
+Icing... ...Check OAT
+
+[DESCENT CHECKS]
+ATIS... Read
+Altimeter... - Set with local QNH
+EDM...Check cooling rate
+MSA...Checked
+Fuel... Check Sufficient
+Mixtures...Enrich with Descent
+PWR Setting ...Reduce as Required
+Cowl Flaps... Closed
+Engine & Associated Instruments...Check
+Icing... Check
+
+[APPROACH CHECKLIST]
+Radio/Nav Equipment...Set / Identified
+H.S.I./R.M.I & Compass...Cross Checked
+Altimeters...Set/Cross Checked
+Approach Briefing ...Completed
 
 
+[PRE LANDING CHECKLIST]
+Seats/Seat Belts...Erect/Secure
+Fuel Selectors ...ON
+Rudder... Neutral
+Flaps... -Set
+Cowl Flaps... Open
+Mixtures... Rich
+Propellers... 2450 RPM
+Brakes... Off
+Landing Gear...Down / below 129 KIAS(three green one on the Mirror)
+A/P...OFF
+Landing Lights...ON
+
+[AFTER LDG CHECKLIST]
+Landing Time... Noted
+Flaps... Up
+Transponder... STBY
+Pitot Heat... Off
+Recognition Lights... Off
+Landing Lights...As Required
+Propeller De-Ice... Off
+Air Intake... ...Open
+Heater/Fan Switch... Fan
+Defroster... As Required
+Trimmers... Neutral
+Cowl Flaps... Open
+Radio / Nav Equipment...As Required
+
+[SHUTDOWN CHECKIST]
+Parking Brake... ON
+Throttles... 1200 RPM
+Avionics & Avionics Master Switch...OFF
+Heater / Fan... 2 min then OFF
+Ammeters...Check (Less Than 10 AMPS)
+Exterior Lights - except ACL (Fin) Light...OFF
+Check ...3 Mins Have Elapsed Since Landing
+Mixtures... ...I.C.O
+Magnetos... OFF
+Anti Collission Light (Fin)...OFF
+Interior Lights... All OFF
+Battery & Alternators... ...OFF
+Control Wheels...Secure With Seat Strap
+-DURING CLIMB IN HOT WEATHER CONDITIONS, IT MAY BE NECESSARY TO USE LO AUXILIARY FUEL PUMP FOR VAPOR SUPPRESSION AVOID CONTINUOUS GROUND OPERATION BETWEEN 1700 – 2100 RPM IN CROSS / TAIL WIND OVER 10 KT AVOID CONTINUOUS OPERATIONS BETWEEN 2000 RPM and 2200 RPM ABOVE 32” MP
+
+<STARTING ENGINE WHEN FLOODED>
+Mixture... ...Iddle Cut Off
+Throttle... FULLY FORWARD
+PROPELLER... FORWARD
+Master Switch... ON
+Magnetos... ON
+Auxiliary Fuel Pump... OFF
+Propeller Area ... Clear
+Starter ... Engage
+When Engine start:
+Throttle... retard
+Mixture ... Advance slowly
+
+<STARTING ENGINE IN COLD WEATHER>
+Props...Turn through by hand (3 times)
+Fuel Selector... ON
+Mixture... Full RICH
+Throttle... full FORWARD
+Propeller Control... full FORWARD
+Master Switch... ON
+Magnetos... ON
+Auxiliary Fuel Pump...On low boost
+Starter... Engage
+Primer... On for 3 seconds
+Throttle...full FORWARD to full AFT
+Primer...ON & OFF every 3 sec.
+
+<STARTING ENGINE WITH EXTERNAL POWER SOURCE>
+Master Switch... OFF
+All electrical equipment...OFF
+Terminals... Connect
+External Power plug...Insert in Fuselage
+Proceed with normal start:
+Throttles... lowest possible RPM
+External power plug...disconnect from fuselage
+Master Switch ...ON (Check ammeter)
+Oil Pressure... Check
+
+{ENGINE FIRE ON GROUND}
+-if Engine has Not Started:
+Mixture... I.C.O
+Throttle... Open Fully
+Starter... Operate
+-If Engine Has Started:
+Engine... Keep Running
+If Fire Continues, After A Few Seconds
+Throttles... Closed
+Mixtures... I.C.O.
+Fuel Pumps... Off
+Fuel Selectors... Off
+Magnetos... ...Off
+Brakes... Set
+Battery Master Switch... Off
+
+{ENGINE FIRE IN FLIGHT}
+Affected Engine:
+Fuel Selector... Off
+Throttle... Close
+Propeller... Feather
+Mixture... I.C.O.
+Heater... Off
+Defroster... Off
+If fire continues and terrain permits...Land Immediately
+-Note : DO NOT Attempt A Restart Following An Engine Fire
+
+{ENGINE FAILURE MEMORY ITEMS}
+AUTOPILOT...DISCONNECT
+FLY THE AEROPLANE
+PITCH FOR BLUE LINE
+PUSH RUDDER TO MAINTAIN HEADING (and some aileron to same side)
+POWER-UP
+MIXTURES FULL RICH
+PROPELLERS FULL FORWARD
+THROTTLES ADVANCE, Max 40"
+CLEAN-UP (minimise drag)
+LDG GEAR UP
+FLAPS RETRACT
+IDENTIFY...DEAD FOOT is DEAD ENGINE
+VERIFY...THROTTLE DEAD ENGINE CLOSE
+FEATHER...PROPELLER DEAD ENGINE FULL FEATHER
+MIXTURE DEAD ENGINE...IDLE CUT-OFF
 
 
+{SECURE DEAD ENGINE AFTER FEATHERING}
+Fuel Selector Dead Engine...SHUT OFF
+Mixture Dead Engine...(Verify) I.C.O.
+Cowl Flap Dead Engine...CLOSE
+Magnetos Dead Engine ... OFF
+Alternator Dead Engine...OFF
+Fuel Pump Dead Engine...(Verify) OFF
+Engine Instruments Live Engine...CHECK
+Cowl Flap Live Engine ...OPEN
+Electrical Load ...REDUCE
+Power Live Engine ...when feasible 32" / 2450 RPM
+Gyro Pressure ...CHECK
+Fuel Selector Live Engine ...Consider CROSS-FEED
 
+{ENGINE FAILURE DURING FLIGHT}
+Airspeed...89KTS Minimum (Blue Line)
+Trim...adjust 50 bank toward operative engine
+Memory items...Completed
+Before feathering & securing Inop. Engine:
+Fuel Flow ... Check
+-If deficient press...Aux.Fuel Pump HI BOOST
+-If power is not restored Aux. Fuel Pump ... OFF
+Fuel Quantity... Check
+Alternate Air... ON
+Mixture, T & Ps and Magnetos ...Check
+Re-start... Try
+Below 66 Kts
+Rudder...apply to maintain heading / against turn
+Throttles (both engines)...retard to stop turn
+Pitch down... to increase speed above 66 Kts
+Above 66 Kts (pitch to maintain > 66 Kts)
+Operative engine...increase pwr as required
+Airspeed...pitch for Blue Line (89 kts)
+Drag ...minimise (Ldg Gear / Flaps)
+-If Altitude permits a restart may be attempted
+-If restart fails or altitude does not permit:
+Inop. Eng. Prop...Feather
+Inop. Eng...Complete Eng. Sec. Proc.
+Cowl Flaps (Operative Engine.) ...as required
 
+{UNFEATHERING PROCEDURE AND STARTING CHECKLIST}
+Fuel Selector (inop engine)...ON
+Throttle... Set ¼ “ Open
+Propeller Control...forward to cruise RPM pos.
+Mixture... Rich
+Auxiliary Fuel Pump (inop engine) ...OFF
+Magneto Switches... ON
+Starter...engage until prop. Wingmills
+Throtte...reduce power until engine is warm
+Alternator... ON
+If engine does not start... prime as required
+
+{ELECTRICAL FAILURES}
+-Double Alternator Failure
+Field Circuit Breakers...Check/Reset
+Alternator... Switches Off (both) then turn ON one at a time while observing ammeter Alternator showing Least (but NOT ZERO) amps. And turn it switch ON
+If power is not restored...Check circuit breakers And reset once if required.
+Electrical Load...As Required
+-If Output Not Restored:
+Battery Master Switch...Off For 6 Sec Min.
+-If Failure Persists Battery Only Remains Max. Of 30 Mins. Land ASAP.
+Extend Gear By Emergency System.
+-Single Alternator Failure
+Field Circuit Breaker...Check/Reset
+Ammeter/Warning Light...Check
+Alternator Switch... Cycle
+-If Output Restored:
+Electrical Load...As Required
+
+{EMERGENCY GEAR EXTENSION}
+Check Before Extending gear manually:
+Battery Master Switch ...ON
+Circuit Breakers... IN
+Alternator Output... NORMAL
+Navigation Lights ...OFF (Daytime)
+Airspeed... Below 85 KTS
+Gear Selector... GEAR DOWN
+Gear Emergency Knob-Release Guard & Pull
+Gear Indicator Lights...Check 3 Greens
+Red Unsafe Light Out
+Nose Wheel Position Check by the Mirror
+
+{EMERGENCY DESCENT}
+Throttles... Closed
+Propellers... Full Forward
+Mixture...As Required for smooth operation
+Landing Gear... Extend
+Flaps ... As required
+Cowl Flaps... As required
+
+{TRIM RUNAWAY}
+Autopilot ... Disconnect
+Trim ... ...Disconnect
+Trim and Autopilot circuit breaker...OFF
+Re-Trim ... manually
+
+(PROCEDURES IN ICING CONDITIONS)
+Pitot Heater... Confirm On
+Windshield Heat... On
+Propeller De-Icer... On
+Windshield Defroster...On
+Select Air Intake ... OPEN
+Heat / Fan Switch ... HEAT
+Thermostat Control ... Hot
+Defrost Switch ... ON
+De-Icing Boots...On ¼ - ½ “ Ice Build
+-If Required:
+Alternate Air Controls...ON
+Alternate Static Source...Select
+
+{SINGLE ENGINE LANDING}
+Approach speed... 95 KTS
+Mixture ... Full Rich
+Inop. Engine propeller...Feather
+Landing Gear... Down
+Flaps ... Max 250
+RudderTrim...Set Neutral
+When certain of making field:
+Flaps 400 ... if required

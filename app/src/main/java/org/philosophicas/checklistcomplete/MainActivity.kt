@@ -15,6 +15,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var goBtn: Button
     private lateinit var selectedAircraftTv: TextView
 
+    //private val CODE_DRAW_OVER_OTHER_APP_PERMISSION = 2084
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -42,6 +44,26 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+/*
+        //Lanzamos el servicio
+        if ((Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) || Settings.canDrawOverlays(this)) {
+            if (ContextCompat.checkSelfPermission(
+                    this,
+                    Settings.ACTION_MANAGE_OVERLAY_PERMISSION
+                ) != PackageManager.PERMISSION_GRANTED
+            ) {
+                ActivityCompat.requestPermissions(
+                    this,
+                    arrayOf(Settings.ACTION_MANAGE_OVERLAY_PERMISSION),
+                    CODE_DRAW_OVER_OTHER_APP_PERMISSION
+                )
+            }
+        } else {
+            startPanicButtonService()
+        }
+        */
+
+
     }
 
 
@@ -53,6 +75,40 @@ class MainActivity : AppCompatActivity() {
             selectedAircraftTv.text = it
         }
     }
+
+/*
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+
+        if (requestCode == CODE_DRAW_OVER_OTHER_APP_PERMISSION) {
+
+            if (grantResults.isNotEmpty()) {
+                if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    startPanicButtonService()
+                } else {
+                    Toast.makeText(
+                        this,
+                        "Draw over other app permission not available. Closing the application",
+                        Toast.LENGTH_SHORT
+
+                    ).show()
+                }
+            }
+        }
+
+
+    }
+
+    fun startPanicButtonService() {
+        startService(Intent(this, PanicButtonService::class.java))
+
+    }
+    */
+
 
 }
 
